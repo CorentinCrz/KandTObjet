@@ -38,9 +38,8 @@ class FrontController
             case "page.index":
             default:
                 // display page list
-//                $controller = new PageController();
-//                $controller->index();
-                echo 'test index';
+                $controller = new PageController();
+                $controller->index();
                 break;
         }
     }
