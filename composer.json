@@ -1,0 +1,13 @@
+{
+    "name": "corentin/kand-tobjet",
+    "description": "first object project",
+    "type": "project",
+    "license": "gnu",
+    "authors": [
+        {
+            "name": "CorentinCrz",
+            "email": "ccroiz@live.fr"
+        }
+    ],
+    "require": {}
+}
