@@ -9,38 +9,40 @@
 namespace Controller;
 
 
+use View\PageView;
+
 class FrontController
 {
     public function __construct()
     {
+        $view = new PageView();
+        $view->adminHead();
+        $controller = new PageController();
         $action = $_POST[\KANDT_ACTION_PARAM] ?? $_GET[\KANDT_ACTION_PARAM] ?? '';
         switch ($action) {
             case "page.show":
                 // display page details
-//                $controller = new PageController();
-//                $controller->show();
+                $controller->show();
                 break;
             case "page.add":
                 // display page ajout
-//                $controller = new PageController();
-//                $controller->add();
+                $controller->add();
                 break;
             case "page.edit":
                 // display page edit
-//                $controller = new PageController();
-//                $controller->edit();
+                $controller->edit();
                 break;
             case "page.delete":
                 // display page delete
-//                $controller = new PageController();
-//                $controller->delete();
+                $controller->delete();
                 break;
             case "page.index":
             default:
                 // display page list
-                $controller = new PageController();
                 $controller->index();
                 break;
         }
+        $view->adminFoot();
     }
+
 }
