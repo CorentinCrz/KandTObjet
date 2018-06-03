@@ -9,5 +9,16 @@
             "email": "ccroiz@live.fr"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Controller\\": "src/Controller",
+            "View\\": "src/View",
+            "Model\\": "src/Model",
+            "Helper\\": "src/Helper"
+        },
+        "files": [
+            "init.php"
+        ]
+    }
 }
